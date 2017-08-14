@@ -133,7 +133,7 @@ module Gemstash
       if key
         S3.base_file(properties_filename).exists? && S3.base_file(content_filename(key)).exists?
       else
-        S3.base_file(properties_filename).exists? && content? 
+        S3.base_file(properties_filename).exists? && content?
       end
     end
 
@@ -329,7 +329,7 @@ module Gemstash
     end
 
     def atomic_write(file, content)
-      S3.base_file(file).put(body: content)   
+      S3.base_file(file).put(body: content)
     end
 
     def content_filename(key)
