@@ -1,0 +1,50 @@
+version: 1
+update_configs:
+  - package_manager: "ruby:bundler"
+    directory: "/"
+    update_schedule: "live"
+    allowed_updates:
+    - match:
+        update_type: "security"
+  - package_manager: "ruby:bundler"
+    directory: "/spec/data/bundles/integration_spec/default_upstream_gems/"
+    update_schedule: "live"
+    allowed_updates:
+    - match:
+        update_type: "security"
+  - package_manager: "ruby:bundler"
+    directory: "/spec/data/bundles/integration_spec/private_gems/"
+    update_schedule: "live"
+    allowed_updates:
+    - match:
+        update_type: "security"
+  - package_manager: "ruby:bundler"
+    directory: "/spec/data/bundles/integration_spec/header_mirror_gems/"
+    update_schedule: "live"
+    allowed_updates:
+    - match:
+        update_type: "security"
+  - package_manager: "ruby:bundler"
+    directory: "/spec/data/bundles/integration_spec/redirecting_gems/"
+    update_schedule: "live"
+    allowed_updates:
+    - match:
+        update_type: "security"
+  - package_manager: "ruby:bundler"
+    directory: "/spec/data/bundles/integration_spec/upstream_gems/"
+    update_schedule: "live"
+    allowed_updates:
+    - match:
+        update_type: "security"
+  - package_manager: "ruby:bundler"
+    directory: "/spec/data/gems/example/"
+    update_schedule: "live"
+    allowed_updates:
+    - match:
+        update_type: "security"
+  - package_manager: "ruby:bundler"
+    directory: "/spec/data/gems/speaker/"
+    update_schedule: "live"
+    allowed_updates:
+    - match:
+        update_type: "security"
